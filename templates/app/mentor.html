@@ -1,0 +1,116 @@
+{% load  static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/chatbothome.css'%}">
+    <link rel="stylesheet" href="{% static 'css/mentor.css'%}">
+
+    <script>
+        async function sendMessage() {
+            const userInput = document.getElementById("user_input").value;
+            const responseContainer = document.getElementById("response_container");
+
+            const response = await fetch("{% url 'chatbot' %}", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "X-CSRFToken": "{{ csrf_token }}"
+                },
+                body: new URLSearchParams({
+                    "user_input": userInput
+                })
+            });
+
+            const data = await response.json();
+            responseContainer.innerHTML += `<div class="message user"><strong>You:</strong> ${userInput}</div>`;
+            responseContainer.innerHTML += `<div class="message bot"><strong><br>Guru.:</strong> ${data.response}</div>`;
+            document.getElementById("user_input").value = '';
+            responseContainer.scrollTop = responseContainer.scrollHeight; // Auto-scroll to the bottom
+        }
+    </script>
+</head>
+<body>  
+    <div class="chatbot-box">
+        <div class="container">
+        <div class="chatbot-header">
+                <h1>Chat With Guru</h1>
+                <p>Welcome to our learning platform.....!</p>
+            </div>
+            <div class="chatbot-message">
+                    <div id="response_container" class="chat-container">
+                </div>
+                <div class="chatbot-input">
+                    <div id="input_container">
+            <input type="text" id="user_input" placeholder="Type your message here...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+              </div>
+    </div>
+    </div>
+   
+
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHlDerkPmhtCOzfvbQmPSZOW_QuwexmogYLw&s" alt="" class="img">
+        <h1>Harry</h1>
+        <p class="title">App Developer</p>
+        <div class="desc">
+            <p>I am app developer specializing in helping individuals and teams in using sigma methadology.</p>
+
+        </div>
+        <button class="btn">
+            <a href="https://www.youtube.com/watch?v=InigFUSiPl8">Contact Me</a>
+        </button>
+    </div>
+    <div class="card">
+        <img src="https://yt3.googleusercontent.com/ytc/AIdro_mp0uj33BBfZ18_r1ZZxHHXMrfCvrVUzMmhe8tj7BAqlQ=s900-c-k-c0x00ffffff-no-rj" alt="" class="img">
+        <h1>Abdul Bari</h1>
+        <p class="title">Java Instructor</p>
+        <div class="desc">
+            <p>I am an experienced Java instuctor with a passion for teaching programming concepts</p>
+
+        </div>
+        <button class="btn">
+            <a href="https://www.youtube.com/playlist?list=PLDN4rrl48XKoOSTnq72gar56u7XspkCfe">Contact Me</a>
+        </button>
+    </div>
+    <div class="card">
+        <img src="https://yt3.googleusercontent.com/VlWJZZnCdw63GAZ8SHYJ_3ZdC_e0hWl3IEEPZN08Ps0DitpRDgxziY42DIqdQhkGIba7yn7xd0Y=s900-c-k-c0x00ffffff-no-rj" alt="" class="img">
+        <h1>Aman Dattarwal</h1>
+        <p class="title">Web Developer</p>
+        <div class="desc">
+            <p>I am a passionate web developer dedicated to help students dicsover their  potential.</p>
+
+        </div>
+        <button class="btn">
+            <a href="https://www.youtube.com/watch?v=l1EssrLxt7E">Contact Me</a>
+        </button>
+    </div>
+    <div class="card">
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQHGNAxeyJhZbQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1685972237021?e=2147483647&v=beta&t=6ElxN1xDajSS3ry09A1rAPgwP-0Hk_oyrO2_oKE2HPI" alt="" class="img">
+        <h1>Shradda Khapra</h1>
+        <p class="title">DSA instructor</p>
+        <div class="desc">
+            <p>I am an experienced DSA instructor and passionate tutor dedicated to help aspiring developers. </p>
+
+        </div>
+        <button class="btn">
+            <a href="https://www.youtube.com/watch?v=1yrh60og6qc">Contact Me</a>
+        </button>
+    </div>
+    <br>
+    <br>  
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <a href="{% url 'home' %}">Back to Home</a>
+
+
+</body>
+</html>
+
+
+

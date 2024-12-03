@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <center><title>Tech Blogs</title></center>
+    <style>
+        * General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        /* Body & General Styling */
+        body {
+            font-family: 'Roboto',sans-serif;
+            background-color: #74b9ff ;  /* Dark background */
+            color: #000000;  /* Light text */
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            
+        .roboto-thin {
+            font-family: "Roboto", sans-serif;
+            font-weight: 50;
+            font-style: normal;
+        }
+        }
+
+        /* Header (Navbar) */
+        header {
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+            margin: 0%;
+            padding: 0%;
+            
+        }
+
+        /* Header (Navbar) */
+        header {
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+            padding: 10px 0;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header nav h1 {
+            font-size: 100px;
+            margin-left: 0px;
+            font-family: Roboto, serif;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-right: 25px;
+        }
+
+        header nav ul li a {
+            color: rgb(227, 240, 243);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 100;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px 0;
+
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #e5eeed;
+            transition: color 0.3s ease;
+        }
+
+        .blog-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);  /* 3 columns by default */
+            gap: 2rem;
+            transition: grid-template-columns 0.3s ease;
+        }
+
+        .card {
+            background-color: #e6e8ec;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            width:300px;
+            text-align: center;
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+            padding: 1px;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 6px 20px rgba(10, 14, 14, 0.5);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit :fill; 
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Tech Blogs</h1>
+                
+            </div>
+        </nav>
+    </header> 
+ <!-- Main Content -->
+ <main>
+        <div class="container">
+            <h2>Blogs</h2>
+            <div class="blog-cards">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="https://assets.thehansindia.com/h-upload/2021/06/26/1084530-t.webp"Tech Blog Image 1">
+                    <h2><a href="https://www.techcrunch.com" target="_blank">TechCrunch: Latest Tech News</a></h2>
+                    <p>Stay up to date with the latest technology news, startups, and internet culture on TechCrunch.</p>
+                    <a href="https://www.techcrunch.com" class="read-more" target="_blank">Read More</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2021/05/19/06/13/smartphone-6265047_640.jpg" alt="Tech Blog Image 2">
+                    <h2><a href="https://www.theverge.com/tech" target="_blank">The Verge: The Future of Technology</a></h2>
+                    <p>The Verge is your gateway to exploring the future of technology, from AI to gadgets and innovations.</p>
+                    <a href="https://www.theverge.com/tech" class="read-more" target="_blank">Read More</a>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvSYDnhE9Wdi-Ie6bLTNJscqR71KkSla1UUw&s" alt="Tech Blog Image 3">
+                    <h2><a href="https://www.wired.com" target="_blank">Wired: Breaking the Future</a></h2>
+                    <p>Wired is a go-to site for in-depth tech coverage. From cybersecurity to artificial intelligence, they cover everything.</p>
+                    <a href="https://www.wired.com" class="read-more" target="_blank">Read More</a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card">
+                    <img src="https://thumbs.dreamstime.com/b/logo-engadget-samsung-tablet-wooden-background-engadget-multilingual-technology-blog-network-coverage-103398892.jpg" alt="Tech Blog Image 4">
+                    <h2><a href="https://www.engadget.com" target="_blank">Engadget: Your Gadget Guide</a></h2>
+                    <p>Engadget brings you reviews, buying guides, and news on all the latest tech gadgets.</p>
+                    <a href="https://www.engadget.com" class="read-more" target="_blank">Read More</a>
+                </div>
+                <!-- Card 5 -->
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpoGfRz7kWdz37oQHQ8jpxmnijC-1Nxp2_Jw&s" alt="Tech Blog Image 5">
+                    <h2><a href="https://www.techradar.com" target="_blank">TechRadar: Your Ultimate Tech Resource</a></h2>
+                    <p>TechRadar covers everything from the latest reviews to industry insights in the tech world.</p>
+                    <a href="https://www.techradar.com" class="read-more" target="_blank">Read More</a>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card">
+                    <img src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_640.jpg" alt="Tech Blog Image 6">
+                    <h2><a href="https://www.mashable.com" target="_blank">Mashable: Technology and Digital Culture</a></h2>
+                    <p>Mashable provides tech news, digital culture, and the latest internet trends all in one place.</p>
+                    <a href="https://www.mashable.com" class="read-more" target="_blank">Read More</a>
+                </div>
+                <!-- Card 7 -->
+                <div class="card">
+                    <img src="https://images.scalebranding.com/letter-c-tech-logo-a9a12fe8-5b96-4690-9eaf-df2b66feb025.jpg" alt="Tech Blog Image 7">
+                    <h2><a href="https://www.cnet.com" target="_blank">CNET: The Technology News Source</a></h2>
+                    <p>CNET is your trusted resource for everything tech, from reviews to news and guides.</p>
+                    <a href="https://www.cnet.com" class="read-more" target="_blank">Read More</a>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="card">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/008/991/361/small/z-tech-letter-logo-concept-with-connected-technology-dots-vector.jpg" alt="Tech Blog Image 8">
+                    <h2><a href="https://www.zdnet.com" target="_blank">ZDNet: Technology Business News</a></h2>
+                    <p>ZDNet focuses on the intersection of business and technology, with expert insights and analysis.</p>
+                    <a href="https://www.zdnet.com" class="read-more" target="_blank">Read More</a>
+                </div>
+
+    </div>        
+    </div>
+</main>
+<a href="{% url 'home' %}">Back to Home</a>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Tech Blogs. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage Design</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+</head>
+<body>
+    <div class="main">
+    
+
+    {% include 'app/navbar.html' %}
+        </div> 
+        <div class="content">
+            <h1>SKILL SYNERGY </h1>
+            <p class="par">"Guiding You towards Growth,One Step at a Time"</p>
+
+                <button class="cn"><a href="#">JOIN US</a></button>
+                    <button class="btnn"><a href="{% url 'login'%}">Login</a></button>
+                    <p class="par">login to chat with others </p>
+                    
+                    <div class="icons">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                    </div>
+                        
+                    <img src="https://blog.booknook.com/hubfs/1_CE_Blog_High-Impact-Tutoring.jpg" alt="" class ="img">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
